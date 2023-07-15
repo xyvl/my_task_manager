@@ -2,24 +2,9 @@
 import Link from "next/link";
 import styles from "./header.module.scss";
 import { usePathname } from "next/navigation";
-import { useEffect } from "react";
-
 const Header = () => {
   const pathname = usePathname();
 
-  // useEffect(() => {
-  //   const allNavigationLink = document.querySelectorAll<HTMLAnchorElement>(
-  //     `.${styles.main_block_navigation}`
-  //   );
-
-  //   allNavigationLink.forEach((el) => {
-  //     console.log(el.href)
-  //     if (
-  //           el.href.split(el.host)[1] === pathname
-  //         )
-  //           el.classList.add(`${styles.active_navigation}`);
-  //   });
-  // }, []);
   return (
     <header className={styles.header}>
       <div className={styles.logo_block}>
@@ -102,7 +87,12 @@ c121 60 169 97 178 141 6 24 21 35 99 72 67 32 113 63 165 110 112 103 163
         <span className={styles.logo_text}>Next Task</span>
       </div>
       <div className={styles.block_navigation}>
-        <Link className={`${styles.main_block_navigation} ${pathname === '/' ? styles.active_navigation: null}`} href="/">
+        <Link
+          className={`${styles.main_block_navigation} ${
+            pathname === "/" ? styles.active_navigation : null
+          }`}
+          href="/"
+        >
           <svg
             className={styles.main_block_navigation_img}
             viewBox="0 0 20 20"
@@ -123,7 +113,12 @@ c121 60 169 97 178 141 6 24 21 35 99 72 67 32 113 63 165 110 112 103 163
           </svg>
           <p className={styles.main_block_navigation_text}>Главная</p>
         </Link>
-        <Link className={`${styles.main_block_navigation} ${pathname === '/task' ? styles.active_navigation: null}`} href="/task">
+        <Link
+          className={`${styles.main_block_navigation} ${
+            pathname === "/task" ? styles.active_navigation : null
+          }`}
+          href="/task"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className={styles.main_block_navigation_img}

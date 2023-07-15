@@ -5,7 +5,7 @@ import React from 'react'
 
 const page = () => {
 	return (
-		<main className="grid grid-cols-18-60-22 h-screen">
+		<main className="grid grid-cols-18-60-22 h-screen bg-main-dark">
       <Header/>
       <Main/>
       <Footer/>

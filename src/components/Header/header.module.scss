@@ -1,8 +1,8 @@
 .header {
-  @apply border-r-1 dark:border-x-color-secondary-light;
+  @apply border-r-1 border-x-color-secondary;
 }
 .logo_block {
-  @apply flex items-center ml-7 dark:text-color-main-dark text-color-main-light text-xl mt-11;
+  @apply flex items-center ml-7  text-xl mt-11;
 }
 .logo {
   @apply w-10 h-10;
@@ -17,27 +17,27 @@
   @apply ml-7 flex items-center h-10 mb-5;
 }
 .main_block_navigation_text {
-  @apply text-base dark:text-color-secondary-light text-color-main-light ml-3;
+  @apply text-base ml-3;
 }
 .main_block_navigation_img {
   @apply w-6 h-6;
   > path {
-    @apply fill-color-active-all-light;
+    @apply fill-color-active-all;
   }
 }
 .active_navigation .main_block_navigation_img {
   > path {
-    @apply fill-color-active-all-dark;
+    @apply fill-color-active-all;
   }
 }
 
 .active_navigation .main_block_navigation_text {
-  @apply text-color-active-all-light;
+  @apply text-color-active-all;
 }
 
 .active_navigation {
   &:before {
     content: "";
-    @apply absolute -left-2.5 w-5 h-10 bg-color-active-all-dark  rounded-3xl;
+    @apply absolute -left-2.5 w-5 h-10 bg-color-active-all  rounded-3xl;
   }
 }

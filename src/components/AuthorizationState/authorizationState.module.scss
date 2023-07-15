@@ -1,0 +1,9 @@
+.main{
+	@apply flex gap-3 ml-8;
+}
+.link{
+	transition: all .1s;
+	&:hover{
+		@apply text-color-active-all
+	}
+}

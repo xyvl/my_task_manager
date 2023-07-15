@@ -1,12 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-*{
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+:root {
+  --main: #fff;
+  --color-main: #000;
+  --color-secondary: #757575;
+  --color-active-all: #A85CF9;
+}
+:root.dark {
+  --main: rgba(0, 0, 0);
+  --color-main: #ffffff;
+  --color-secondary: #e6e6e6;
+  --color-active-all: #5534a5;
+}
+* {
   @apply m-0 p-0;
   box-sizing: border-box;
 }
 
 body {
-  @apply bg-main-light dark:bg-main-dark dark:text-color-main-dark text-color-main-light
+  @apply bg-main text-color-main;
+  font-family: "Roboto", sans-serif;
 }

@@ -1,0 +1,27 @@
+.checkbox {
+  @apply appearance-none hidden invisible relative;
+}
+.circle_checkbox {
+  @apply relative block w-10 h-5 bg-color-main cursor-pointer rounded-2xl overflow-hidden;
+  
+}
+.active{
+  transition: all .4s;
+}
+.checkbox:checked{
+	@apply bg-color-main;
+  
+}
+.checkbox:checked ~ .circle_checkbox {
+  @apply bg-color-main -z-10;
+}
+.circle_checkbox::before {
+  @apply content-[''] absolute top-0.5 left-0.5 bg-main h-4 w-4 rounded-1/2 border-none;
+}
+.circle_checkbox.active::before{
+  transition: all .4s;
+}
+.checkbox:checked ~ .circle_checkbox::before {
+  @apply bg-main;
+  left: 22px;
+}
